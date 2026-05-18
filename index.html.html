@@ -107,13 +107,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 72px;display:fl
 .sl{font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 
 /* Photo */
-.pbox{position:relative;width:340px;height:340px;animation:fup .9s .15s both}
-.pglow{position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(circle,rgba(79,142,247,.18),transparent 65%);animation:gp 5s ease-in-out infinite;z-index:0}
+.pbox{position:relative;width:320px;height:320px;animation:fup .9s .15s both}
+.pglow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(79,142,247,.18),transparent 65%);animation:gp 5s ease-in-out infinite;z-index:0}
 @keyframes gp{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.08);opacity:1}}
-.pring{position:absolute;inset:-3px;border-radius:40% 60% 52% 48%/44% 48% 52% 56%;background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));animation:pr 10s ease-in-out infinite;z-index:1}
-@keyframes pr{0%,100%{border-radius:40% 60% 52% 48%/44% 48% 52% 56%}25%{border-radius:56% 44% 40% 60%/60% 40% 60% 40%}50%{border-radius:44% 56% 60% 40%/40% 60% 44% 56%}75%{border-radius:60% 40% 44% 56%/56% 56% 44% 44%}}
-.pinner{position:absolute;inset:3px;border-radius:inherit;overflow:hidden;z-index:2;background:var(--s2)}
-.pinner img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.pring{position:absolute;inset:0;border-radius:50%;padding:4px;background:conic-gradient(var(--blue),var(--cyan),var(--purple),var(--blue));animation:spin 4s linear infinite;z-index:1}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.pinner{position:absolute;inset:4px;border-radius:50%;overflow:hidden;z-index:2;background:var(--s2)}
+.pinner img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
 
 /* Floating badges */
 .fb{position:absolute;z-index:5;background:rgba(6,6,15,.93);border:1px solid var(--b2);border-radius:var(--rs);padding:10px 14px;display:flex;align-items:center;gap:10px;backdrop-filter:blur(20px);box-shadow:0 8px 40px rgba(0,0,0,.7);white-space:nowrap}
